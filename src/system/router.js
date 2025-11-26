@@ -46,6 +46,7 @@ module.exports = async (dir, _root = true) => {
     }
 
     if (_root) {
+        console.log(chalk.cyan("SCRAPE LIST"))
         Object.entries(scrap).forEach(([cat, obj]) => {
             console.log(chalk.cyan(`${cat.toUpperCase()}`))
             Object.keys(obj).forEach(fn => console.log(chalk.green(`• ${fn} <active>`)))
